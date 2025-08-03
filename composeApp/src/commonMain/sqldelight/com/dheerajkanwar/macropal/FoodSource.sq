@@ -7,3 +7,14 @@ carbohydrates REAL NOT NULL,
 fats REAL NOT NULL
 );
 
+selectAll: SELECT * FROM FoodSource ORDER BY name ASC;
+
+findById: SELECT * FROM FoodSource WHERE id = ?;
+
+findByName: SELECT * FROM FoodSource WHERE name LIKE LOWER('%' || :searchedText || '%') ORDER BY name ASC;
+
+insert:
+INSERT INTO FoodSource(name, measureIn, protein, carbohydrates, fats)
+VALUES (:name, :measureIn, :protein, :carbohydrates, :fats);
+
+deleteById: DELETE FROM FoodSource WHERE id = ?;
