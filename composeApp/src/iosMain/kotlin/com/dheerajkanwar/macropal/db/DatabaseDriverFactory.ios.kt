@@ -1,4 +1,4 @@
-package com.dheerajkanwar.macropal.db.local
+package com.dheerajkanwar.macropal.db
 
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.native.NativeSqliteDriver

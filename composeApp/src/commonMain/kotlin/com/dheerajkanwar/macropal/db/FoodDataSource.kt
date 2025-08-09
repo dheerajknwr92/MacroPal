@@ -2,8 +2,7 @@ package com.dheerajkanwar.macropal.db
 
 import com.dheerajkanwar.macropal.MacroPalDatabase
 
-internal class FoodSourceDataSource(databaseDriverFactory: DatabaseDriverFactory) {
-    private val database = MacroPalDatabase(databaseDriverFactory.createDriver())
+internal class FoodDataSource(database: MacroPalDatabase) {
     private val foodSourceQueries = database.foodSourceQueries
 
     fun getAllFoodSources() = foodSourceQueries.selectAll().executeAsList()
